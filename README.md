@@ -6,7 +6,8 @@ Light-weight animation module
 
 ### Initializtion
 ```lua
-require "path.to.module"
+Object = require "path.to.classic"
+require "path.to.animationModule"
 ```
 
 ### Create new quad
