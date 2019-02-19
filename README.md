@@ -49,3 +49,38 @@ animation:draw(spriteSheet, quads, x, y, r, sx, sy, ox, oy, kx, ky)
   - sx, sy is the scale of the animation (when omitted becomes 1, 1)
   - ox, oy is the origin offset for each frame of the animation (when omitted becomes 0, 0)
   - kx, ky is the skew of the animation (when omitted becomes 0)
+
+
+## Example
+```lua
+function love.load()
+  Object = require "classic" --needs classic and you have to assign it a variable named Object
+  require "AnimationClass"   --you can rename the module's name if you want
+
+
+  love.graphics.setBackgroundColor(1, 1, 1)
+  love.graphics.setDefaultFilter("nearest", "nearest") --setting background color and setting filter
+
+  spriteSheet = love.graphics.newImage("SpriteSheet14.png") -- the sprite sheet
+
+  playerQuads = getQuads(0, 0, 1, 4, 32, 32) -- get quads
+  playerAnimation = Animation(playerQuads, 1, 4, 1/12) -- create new animation
+
+  angle = 0 --angle variable 
+
+end
+
+function love.update(dt) --do this every frame
+  if love.keyboard.isDown("space") then --when space key is pressed
+    playerAnimation:play(dt) --play animation
+  else
+    playerAnimation.currentFrame = 1 --if space key is not pressed, set player animation's current frame to 1
+  end
+  angle = angle + 10*dt -- for every frame angle increases by 10
+end
+
+function love.draw()
+  playerAnimation:draw(spriteSheet, playerQuads, love.graphics.getWidth()/2, love.graphics.getHeight()/2, math.rad(angle), 5, 5, 16, 16)
+  --love.graphics.draw(spriteSheet, quads[currentFrame], love.graphics.getWidth()/2, love.graphics.getHeight()/2, math.rad(angle), 5, 5, 16, 16) --draw animation at the middle of the screen, its pivot on the center of the animation. Also, rotate the animation
+end
+```
