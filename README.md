@@ -50,7 +50,7 @@ animation:draw(spriteSheet, quads, x, y, r, sx, sy, ox, oy, kx, ky)
   - r : the angle of the animation in radians (when omitted becomes 0)
   - sx, sy : the scale of the animation (when omitted becomes 1, 1)
   - ox, oy : the origin offset for each frame of the animation (when omitted becomes 0, 0)
-  - kx, ky : the skew of the animation (when omitted becomes 0)
+  - kx, ky : the skew of the animation (when omitted becomes 0, 0)
 
 ### Animation variables
 - animation.quads : table of quads inside tha animation
