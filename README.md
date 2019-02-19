@@ -1,0 +1,2 @@
+# AnimationModule
+Simple animation module
