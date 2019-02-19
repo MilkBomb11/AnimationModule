@@ -16,7 +16,7 @@ quads = getQuads(initX, initY, columns, rows, quadWidth, quadHeight, sheetWidth,
 getQuads() is a function that gets quads from a sprite sheet
   - initX, initY is the start positon when generating quads from a sprite sheet
   - columns is the total amount of columns in the part of the sprite sheet you want to make into an animation
-  - rows is the total amount of rows in the part of the sprite sheet you want to make into an animation
+  - rows is the total amount of rows in the part of the sprite sheet you want to make into an animation<br>
   **Setting both the columns and rows over 1 will only work properly when total number of frames is an even number.**  
   - quadWidth is the width of a quad
   - quadHeight is the height of a quad
