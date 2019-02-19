@@ -80,7 +80,6 @@ function love.update(dt) --do this every frame
 end
 
 function love.draw()
-  playerAnimation:draw(spriteSheet, playerQuads, love.graphics.getWidth()/2, love.graphics.getHeight()/2, math.rad(angle), 5, 5, 16, 16)
-  --love.graphics.draw(spriteSheet, quads[currentFrame], love.graphics.getWidth()/2, love.graphics.getHeight()/2, math.rad(angle), 5, 5, 16, 16) --draw animation at the middle of the screen, its pivot on the center of the animation. Also, rotate the animation
+  playerAnimation:draw(spriteSheet, playerQuads, love.graphics.getWidth()/2, love.graphics.getHeight()/2, math.rad(angle), 5, 5, 16, 16)--draw animation at the middle of the screen, its pivot on the center of the animation. Also, rotate the animation
 end
 ```
