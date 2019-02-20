@@ -61,7 +61,7 @@ animation:draw(spriteSheet, quads, x, y, r, sx, sy, ox, oy, kx, ky)
 
 ## Example
 ```lua
-require "LAL"
+require "LAL" --require LAL
 
 function love.load()
 
