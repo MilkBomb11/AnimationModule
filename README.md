@@ -1,4 +1,4 @@
-# AnimationModule
+# LAL
 Light-weight animation module
 
 
@@ -6,8 +6,7 @@ Light-weight animation module
 
 ### Initializtion
 ```lua
-Object = require "path.to.classic"
-require "path.to.animationModule"
+require "path.to.LAL"
 ```
 
 ### Create new quad
@@ -62,10 +61,9 @@ animation:draw(spriteSheet, quads, x, y, r, sx, sy, ox, oy, kx, ky)
 
 ## Example
 ```lua
-function love.load()
-  Object = require "classic" --needs classic and you have to assign it a variable named Object
-  require "AnimationClass"   --you can rename the module's name if you want
+require "LAL"
 
+function love.load()
 
   love.graphics.setBackgroundColor(1, 1, 1)
   love.graphics.setDefaultFilter("nearest", "nearest") --setting background color and setting filter
